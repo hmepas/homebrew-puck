@@ -15,7 +15,8 @@ class Puck < Formula
 
   def post_install
     # Ensure config directory exists
-    (ENV["HOME"] + "/.config/puck").mkpath
+    config_dir = File.join(Dir.home, ".config", "puck")
+    mkdir_p config_dir
   end
 
   test do
