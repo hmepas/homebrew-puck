@@ -11,6 +11,11 @@ class Puck < Formula
   def install
     system "swift", "build", "--configuration", "release", "--disable-sandbox"
     bin.install ".build/release/Puck"
+    
+    # Install resources
+    resource_path = "#{lib}/Puck_Puck.bundle"
+    mkdir_p resource_path
+    cp_r Dir[".build/release/Puck_Puck.bundle/*"], resource_path
   end
 
   def post_install
