@@ -9,6 +9,11 @@ class Puck < Formula
   depends_on xcode: ["14.0", :build]
 
   def install
+    # Set bundle path during build
+    inreplace "Sources/Puck/resource_bundle_accessor.swift",
+              'Bundle.module.path(forResource: "com.puck.daemon", ofType: "plist")',
+              '"#{lib}/Puck_Puck.bundle/com.puck.daemon.plist"'
+
     system "swift", "build", "--configuration", "release", "--disable-sandbox"
     bin.install ".build/release/Puck"
     
