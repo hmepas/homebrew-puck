@@ -1,8 +1,8 @@
 class Puck < Formula
   desc "Swift Input Method Switching Daemon for macOS"
   homepage "https://github.com/hmepas/puck"
-  url "https://github.com/hmepas/puck/archive/refs/tags/v0.1.10.tar.gz"
-  sha256 "f772626d015d091928095051b38087aa1cf85c3db675dcd06f53f674282f6cef"
+  url "https://github.com/hmepas/puck/archive/refs/tags/v0.1.11.tar.gz"
+  sha256 "e05f78bc97fbc77d26bcead1af8d89c9bd60438feeabaa3dca24a8036c993646"
   license "MIT"
 
   depends_on :macos
